@@ -1,7 +1,9 @@
+$(function() {
 var getSent = function(question){
   var sent = prompt(question);
   var orig = sent;
   getLength(sent, orig);
+  return orig;
 };
 
 var getLength = function(sent, orig){
@@ -57,16 +59,27 @@ var middle = function(length, orig, lttrs){
   alert(letM);
   var finalSent = letM + lttrs;
   alert(finalSent);
-  reverse(finalSent);
+  reverse(finalSent, orig);
 };
 
-var reverse = function(finalSent){
+var reverse = function(finalSent, orig){
   finalSent = finalSent.split("");
   finalSent = finalSent.reverse();
   finalSent = finalSent.join("");
   alert(finalSent);
+  return finalSent;
 };
 
 
 
-getSent("Enter a sentence to capitalize the first and last letter: ");
+var globa = getSent("Enter a sentence to capitalize the first and last letter: ");
+
+$(".jeff").click(function(){
+  alert(globa);
+});
+
+$(".tom").click(function(){
+  alert(finalSent);
+});
+
+});
