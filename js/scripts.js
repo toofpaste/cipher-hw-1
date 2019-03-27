@@ -67,8 +67,12 @@ var reverse = function(finalSent, orig){
   finalSent = finalSent.reverse();
   finalSent = finalSent.join("");
   alert(finalSent);
-  return finalSent;
+  tomSent = finalSent;
+
 };
+
+var tomSent;
+
 
 
 
@@ -79,7 +83,7 @@ $(".jeff").click(function(){
 });
 
 $(".tom").click(function(){
-  alert(finalSent);
+  alert(tomSent);
 });
 
 });
